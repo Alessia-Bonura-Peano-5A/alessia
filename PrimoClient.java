@@ -26,9 +26,7 @@ public class PrimoClient {
             // Invio un numero
 
             Socket s = new Socket("localhost",6666);
-           
-            PrintWriter pw = new PrintWriter (s.getOutputStream(),true);
-            pw.println("Sono il client");
+            s.getOutputStream().write(66);
             s.close();
         } catch (IOException ex) {
             Logger.getLogger(PrimoClient.class.getName()).log(Level.SEVERE, null, ex);
